@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.menu-navegacao {
+    height: 65px;
+    background-color: #E6B9DE;
+
+}
+
+/* estilizar o item que é filho de uma class/id sem precisar atribuir uma class/id indivídual */
+.menu-navegacao>ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+
+
+}
+
+/* espaço: combinador de descendência
+chevron (>): combinador de FILHOS!*/
+.menu-navegacao a {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    color: azure;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding: 4px ;
+
+
+}  /* seguir hierarquia da disposição dos itens*/
+
+.menu-navegacao a:hover{
+    background-color: azure;
+    color: #E6B9DE;
+    transition-duration: 300ms;
+    font-weight: 600;
+
+}
+
+.breadcrumbs {
+    height: 50px;
+}
+
+.breadcrumbs>ul {
+    height: 100%;
+    display: flex;
+    margin-inline-start: 1.5rem;
+    
+}
+
+.breadcrumbs a {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    /* text-transform: capitalize; -> deixa a primeira letra maior que as demais*/
+    color: #8d8888;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: " >";
+    color: #8d8888;
+}
